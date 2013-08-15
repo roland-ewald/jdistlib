@@ -1,0 +1,36 @@
+What's new:
+
+Version 0.0.7 (Mar 29, 2013):
+* Proper fix for pt / pf distribution (PR#15162)
+
+Version 0.0.6 (Jan 11, 2013):
+Further R synchronization fixes the following bugs / adds the following features:
+* qgeom() could return -1 for extremely small q. (PR#14967.)
+* lgamma(x) for very small x (in the denormalized range) is no longer Inf with a warning.
+* plogis(x, lower = FALSE, log.p = TRUE) no longer underflows early for large x (e.g. 800).
+* Imported the simplified logic for T.quantile from R
+* Added multivariate gamma function (MathFunctions.lmvgammafn)
+* Added Wishart distribution sampling (random only)
+
+Version 0.0.5 (Jan 09, 2013):
+* Synchronized with R's patched of the same date. Fixes the following bugs:
+-- qt(1e-12, 1.2) no longer gives NaN.
+-- dt(1e160, 1.2, log=TRUE) no longer gives -Inf.
+-- beta(a, b) could overflow to infinity in its calculations when one of a and b was less than one.  (PR#15075)
+-- lbeta(a, b) no longer gives NaN if a or b is very small (in the denormalized range).
+
+Version 0.0.4 (Jan 09, 2013):
+* Fix for pt / pf distribution. (PR#15162)
+* Added Fretchet, GEV, Generalized Pareto, Gumbel, and Reverse Weibull distributions
+
+Version 0.0.3:
+* Added Logarithmic distribution
+* Fixed visibility of Binomial.quantile to public (as opposed to package)
+* Increased constant precision on Shapiro-Wilk p-value computation
+* Modified density, cumulative, and quantile method signature of Ansari
+  distribution to allow single values (as opposed to arrays of values)
+* Added random number generation for Kendall and Tukey distributions
+* Added exact method for computing Spearman distribution
+* Finalize the method signature of PolyGamma.dpsifn
+* Added MathFunctions.log1px
+

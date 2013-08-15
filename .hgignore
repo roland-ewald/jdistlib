@@ -1,0 +1,6 @@
+glob:target
+glob:*.class
+glob:.settings
+glob:.project
+glob:.classpath
+glob:.checkstyle
