@@ -1,8 +1,8 @@
 
-This is a Maven 3 project of JDistLib (http://jdistlib.sf.net) 
-by Roby Joehanes. The code itself has not been changed.
+**This is a Maven 3 project of JDistLib (http://jdistlib.sf.net) 
+by Roby Joehanes. The code itself has not been changed.**
 
-=====================================================================
+-------------------------
 
 This program is a manual Java translation of R's distribution library
 found in src/nmath folder of the source tar ball. The translation took
