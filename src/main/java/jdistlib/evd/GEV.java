@@ -43,7 +43,7 @@ public class GEV {
 		if (scale <= 0)
 			return Double.NaN;
 		q = (q - loc) / scale;
-		q = shape == 0 ? exp(-exp(-q)) : pow(exp(max(1 + shape * q, 0)), -1.0/shape);
+		q = shape == 0 ? exp(-exp(-q)) : exp(-pow(max(1 + shape * q, 0), -1.0/shape));
 		return !lower_tail ? 1 - q : q;
 	}
 
