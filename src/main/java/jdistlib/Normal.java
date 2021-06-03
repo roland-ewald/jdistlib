@@ -464,8 +464,8 @@ public class Normal {
 		    for(;;) {
 			u2 = random.nextDouble();
 			u3 = random.nextDouble();
-			tt = A - 0.630834801921960* min(u2,u3);
-			if(max(u2,u3) <= 0.755591531667601)
+			tt = A - 0.630834801921960* Math.min(u2,u3);
+			if(Math.max(u2,u3) <= 0.755591531667601)
 			    return (u2<u3) ? tt : -tt;
 			if(0.034240503750111*abs(u2-u3) <= g(tt))
 			    return (u2<u3) ? tt : -tt;
@@ -476,8 +476,8 @@ public class Normal {
 		    for(;;) {
 			u2 = random.nextDouble();
 			u3 = random.nextDouble();
-			tt = 0.479727404222441+1.105473661022070*min(u2,u3);
-			if( max(u2,u3)<=0.872834976671790 )
+			tt = 0.479727404222441+1.105473661022070*Math.min(u2,u3);
+			if( Math.max(u2,u3)<=0.872834976671790 )
 			    return (u2<u3) ? tt : -tt;
 			if( 0.049264496373128*abs(u2-u3)<=g(tt) )
 			    return (u2<u3) ? tt : -tt;
@@ -488,9 +488,9 @@ public class Normal {
 		for(;;) {
 		    u2 = random.nextDouble();
 		    u3 = random.nextDouble();
-		    tt = 0.479727404222441-0.595507138015940*min(u2,u3);
+		    tt = 0.479727404222441-0.595507138015940*Math.min(u2,u3);
 		    if (tt < 0.) continue;
-		    if(max(u2,u3) <= 0.805577924423817)
+		    if(Math.max(u2,u3) <= 0.805577924423817)
 			return (u2<u3) ? tt : -tt;
 	     	    if(0.053377549506886*abs(u2-u3) <= g(tt))
 			return (u2<u3) ? tt : -tt;
